@@ -1,57 +1,45 @@
 'use strict';
 import {car,put,land,drive,arrPessengers,color,
         dours,speed,defaultSpeed,maxSpeed,seats,pessengers} from 'js/car.js';
-var    quantityPut  =  0,
-       quantityLand =  0,
-       speedIndex   = 90;
+var    quantityPut     =  0,
+       quantityLand    =  0,
+       speedometer     = [0,30,90,100,120],
+       indexSpeedometr = 0;
+       
 console.log('typeof color = '+typeof color+' ;typeof dours = '+typeof dours+
             ' ;typeof speed = '+typeof speed+' ;typeof defaultSpeed = '+typeof defaultSpeed+ 
             ' ;typeof maxSpeed = '+typeof maxSpeed+' ;typeof seats = '+typeof seats+
             ' ;typeof pessengers = '+typeof pessengers);
-console.log('car default ',car);
+console.log('car have : '+' '+color+' '+dours+' '+speed+' '+defaultSpeed+' '+maxSpeed+' '
+            +' '+seats+' '+pessengers);
+console.log('car default: color = '+car.color+' ;dours = '+car.dours+' speed = '+car.speed+
+            ' ;defaultSpeed = '+car.defaultSpeed+' ;maxSpeed = '+car.maxSpeed+
+            ' ;seats = '+car.seats+' ;pessengers = '+car.pessengers);
+console.log(' _________________________________________________');
 
 // put pessenger
-console.log('arrPessengers = ', arrPessengers);
-put();
-quantityPut = quantityPut + 1;
-console.log('arrPessengers = ', arrPessengers);
-put();
-quantityPut = quantityPut + 1;
-console.log('arrPessengers = ', arrPessengers);
-put();
-quantityPut = quantityPut + 1;
-console.log('arrPessengers = ', arrPessengers);
-put();
-quantityPut = quantityPut + 1;
-console.log('arrPessengers = ', arrPessengers);
-put();
-quantityPut = quantityPut + 1;
-console.log('arrPessengers = ', arrPessengers);
-put();
-quantityPut = quantityPut + 1;
-console.log('arrPessengers = ', arrPessengers);
+while (quantityPut < 7){
+       console.log('arrPessengers  = ['+arrPessengers+'] car.pessengers = '+car.pessengers);
+       put();
+       quantityPut = quantityPut + 1;
+}
 
 // land pessenger
-land();
-quantityLand = quantityLand + 1;
-console.log('arrPessengers = ', arrPessengers);
-land();
-quantityLand = quantityLand + 1;
-console.log('arrPessengers = ', arrPessengers);
-land();
-quantityLand = quantityLand + 1;
-console.log('arrPessengers = ', arrPessengers);
-//land();
-//quantityLand = quantityLand + 1;
-//console.log('arrPessengers = ', arrPessengers);
-/*
-land();
-quantityLand = quantityLand + 1;
-land();
-quantityLand = quantityLand + 1;
-*/
-// change speed
-drive(speedIndex);
+while (quantityLand < 7){
+       console.log('arrPessengers  = ['+arrPessengers+'] car.pessengers = '+car.pessengers);
+       land();
+       quantityLand = quantityLand + 1;
+}
 
-console.log('quantityPut = '+quantityPut+' quantityLand = '+quantityLand+' target speed = '+speedIndex);
-console.log('car after ',car);
+// change speed
+    put();
+    quantityPut = quantityPut + 1;
+    console.log('arrPessengers  = ['+arrPessengers+'] car.pessengers = '+car.pessengers);
+while (indexSpeedometr < speedometer.length){
+       drive(speedometer[indexSpeedometr]);
+       console.log('speedometr = ',speedometer[indexSpeedometr]+' car.speed = '+car.speed);
+       indexSpeedometr = indexSpeedometr + 1;
+}
+console.log('_______________________________________')
+console.log('quantityPut = '+quantityPut+' quantityLand = '+quantityLand+' target speed = '+speedometer[4]);
+console.log('car after all changes',car);

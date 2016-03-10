@@ -1,37 +1,37 @@
 'use strict';
-var arrPessengers = [];
-var color        = 'color',
-    dours        = 'dours',
-    speed        = 'speed',
-    defaultSpeed = 'defaultSpeed',
-    maxSpeed     = 'maxSpeed',
-    seats        = 'seats',
-    pessengers   = 'pessengers';
+var color         = 'color',
+    dours         = 'dours',
+    speed         = 'speed',
+    defaultSpeed  = 'defaultSpeed',
+    maxSpeed      = 'maxSpeed',
+    seats         = 'seats',
+    pessengers    = 'pessengers',
+    arrPessengers = [];
+var car = {color:'white',dours:4,speed:0,defaultSpeed:60,maxSpeed:100,
+    seats:4,pessengers:0}
 
-var car = {color:'white',dours:4,speed:0,defaultSpeed:60,maxSpeed:100,seats:4,
-           pessengers:arrPessengers.length};
-
-
-if (arrPessengers.length === 0) {
+// quantityPessengers = 0;
+if (car.pessengers === 0) {
         car.speed = 0;
      }
-    
 function put() {
-    if (arrPessengers.length < car.seats){
+    if (car.pessengers < car.seats){
         arrPessengers.push(true);
+        car.pessengers = arrPessengers.length;
      }
 }
 function land(){
-    if (arrPessengers.length > 0) {
+    if (car.pessengers > 0) {
         arrPessengers.shift();
+        car.pessengers = arrPessengers.length;
      }
 }
 function drive(newSpeed) {
     if (newSpeed <= car.maxSpeed
-        & arrPessengers.length > 0){
-        car.speed = newSpeed
+        & car.pessengers > 0){
+        car.speed = newSpeed;
      }
-    else { if (arrPessengers.length > 0) {
+    else { if (car.pessengers > 0) {
               car.speed = car.maxSpeed
             }
      }
