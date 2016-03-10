@@ -1,6 +1,7 @@
 'use strict';
+//code Olegnd
 import {car,put,land,drive,color,
-        dours,speed,defaultSpeed,maxSpeed,seats,pessengers} from 'js/car-2.js';
+        dours,speed,defaultSpeed,maxSpeed,seats,pessengers} from 'js/car.js';
 var    quantityPut     =  0,
        quantityLand    =  0,
        speedometer     = [0,30,90,100,120],

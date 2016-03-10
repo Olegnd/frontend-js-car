@@ -1,4 +1,5 @@
 'use strict';
+// code Olegnd
 var color         = 'color',
     dours         = 'dours',
     speed         = 'speed',
