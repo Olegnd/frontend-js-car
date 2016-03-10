@@ -1,6 +1,6 @@
 'use strict';
-import {car,put,land,drive,arrPessengers,color,
-        dours,speed,defaultSpeed,maxSpeed,seats,pessengers} from 'js/car.js';
+import {car,put,land,drive,color,
+        dours,speed,defaultSpeed,maxSpeed,seats,pessengers} from 'js/car-2.js';
 var    quantityPut     =  0,
        quantityLand    =  0,
        speedometer     = [0,30,90,100,120],
@@ -19,14 +19,14 @@ console.log(' _________________________________________________');
 
 // put pessenger
 while (quantityPut < 7){
-       console.log('arrPessengers  = ['+arrPessengers+'] car.pessengers = '+car.pessengers);
+       console.log('pessengers  = ['+pessengers+'] car.pessengers = '+car.pessengers);
        put();
        quantityPut = quantityPut + 1;
 }
 
 // land pessenger
 while (quantityLand < 7){
-       console.log('arrPessengers  = ['+arrPessengers+'] car.pessengers = '+car.pessengers);
+       console.log('pessengers  = ['+pessengers+'] car.pessengers = '+car.pessengers);
        land();
        quantityLand = quantityLand + 1;
 }
@@ -34,7 +34,7 @@ while (quantityLand < 7){
 // change speed
     put();
     quantityPut = quantityPut + 1;
-    console.log('arrPessengers  = ['+arrPessengers+'] car.pessengers = '+car.pessengers);
+    console.log('pessengers  = ['+pessengers+'] car.pessengers = '+car.pessengers);
 while (indexSpeedometr < speedometer.length){
        drive(speedometer[indexSpeedometr]);
        console.log('speedometr = ',speedometer[indexSpeedometr]+' car.speed = '+car.speed);
