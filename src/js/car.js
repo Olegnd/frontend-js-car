@@ -34,6 +34,7 @@ function drive(newSpeed) {
     else { if (car.pessengers > 0) {
               car.speed = car.maxSpeed
             }
+           else {car.speed = 0}
      }
 }
 export {car,put,land,drive,color,

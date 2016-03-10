@@ -12,10 +12,10 @@ console.log('typeof color = '+typeof color+' ;typeof dours = '+typeof dours+
             ' ;typeof maxSpeed = '+typeof maxSpeed+' ;typeof seats = '+typeof seats+
             ' ;typeof pessengers = '+typeof pessengers);
 console.log('car have : '+' '+color+' '+dours+' '+speed+' '+defaultSpeed+' '+maxSpeed+' '
-            +' '+seats+' '+pessengers);
+            +' '+seats+' '+'pessengers []');
 console.log('car default: color = '+car.color+' ;dours = '+car.dours+' speed = '+car.speed+
             ' ;defaultSpeed = '+car.defaultSpeed+' ;maxSpeed = '+car.maxSpeed+
-            ' ;seats = '+car.seats+' ;pessengers = '+car.pessengers);
+            ' ;seats = '+car.seats+' ;pessengers [] = '+car.pessengers);
 console.log(' _________________________________________________');
 
 // put pessenger
@@ -41,6 +41,12 @@ while (indexSpeedometr < speedometer.length){
        console.log('speedometr = ',speedometer[indexSpeedometr]+' car.speed = '+car.speed);
        indexSpeedometr = indexSpeedometr + 1;
 }
+       land();
+       quantityLand = quantityLand + 1;
+       indexSpeedometr = indexSpeedometr - 1;
+       drive(speedometer[indexSpeedometr]);
+       console.log('pessengers  = ['+pessengers+'] car.pessengers = '+car.pessengers);
+       console.log('speedometr = ',speedometer[indexSpeedometr]+' car.speed = '+car.speed);
 console.log('_______________________________________')
-console.log('quantityPut = '+quantityPut+' quantityLand = '+quantityLand+' target speed = '+speedometer[4]);
+console.log('quantityPut = '+quantityPut+' quantityLand = '+quantityLand+' declared by speed = '+speedometer[4]);
 console.log('car after all changes',car);
