@@ -1,7 +1,7 @@
 'use strict';
 // code Olegnd
-var pessengers = [];
 
+var pessengers = [];
 var car        = {color:'white',dours:4,speed:0,defaultSpeed:60,
                   maxSpeed:100,seats:4,pessengers:pessengers}
 
@@ -25,4 +25,7 @@ function drive(newSpeed) {if (newSpeed <= car.maxSpeed
                                 else {car.speed = 0}
                            }
 }
-export {car,put,land,drive};
+module.exports.car   = car;
+module.exports.put   = put;
+module.exports.land  = land;
+module.exports.drive = drive;
