@@ -11,15 +11,16 @@ var    quantityPut     =  0,
 console.log('car = {'+'color:'+car.color+',dours:'+car.dours+',speed:'+car.speed+
             ',defaultSpeed:'+car.defaultSpeed+',maxSpeed:'+car.maxSpeed+
             ',seats:'+car.seats+',pessengers:'+car.pessengers+'   !!! pessenger []}');           
-console.log('!!! typeof pessengers = ',typeof pessengers);
+console.log('typeof pessengers  ',pessengers);
 console.log('__________________________________________________________________________________________');
 
 // put pessenger
-       console.log('pessengers  = ',pessengers);
+       console.log('pessengers  = ',pessengers,' quantityPut = ',quantityPut);
 while (quantityPut < 6){
        put();
        quantityPut = quantityPut + 1;
        console.log('pessengers  = ',pessengers,' quantityPut = ',quantityPut);
+       
 }
 
 // land pessenger
