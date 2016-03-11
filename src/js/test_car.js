@@ -10,8 +10,8 @@ var    quantityPut     =  0,
 
 console.log('car = {'+'color:'+car.color+',dours:'+car.dours+',speed:'+car.speed+
             ',defaultSpeed:'+car.defaultSpeed+',maxSpeed:'+car.maxSpeed+
-            ',seats:'+car.seats+',pessengers:'+car.pessengers+'   !!! pessenger []}');
-           
+            ',seats:'+car.seats+',pessengers:'+car.pessengers+'   !!! pessenger []}');           
+console.log('!!! typeof pessengers = ',typeof pessengers);
 console.log('__________________________________________________________________________________________');
 
 // put pessenger
