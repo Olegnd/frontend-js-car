@@ -1,6 +1,6 @@
 'use strict';
 //code Olegnd
- 
+/* 
 // test put pessenger
 function testPutPessengers(put){
 var    quantityPut     =  0;
@@ -33,3 +33,4 @@ while (indexSpeedometr < speedometer.length){
 module.exports.testPutPessengers  = testPutPessengers;
 module.exports.testLandPessengers = testLandPessengers;
 module.exports.testChangeSpeed    = testChangeSpeed;
+*/

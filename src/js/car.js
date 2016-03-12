@@ -25,7 +25,8 @@ function drive(newSpeed) {if (newSpeed <= car.maxSpeed
                                 else {car.speed = 0}
                            }
 }
-module.exports.car   = car;
-module.exports.put   = put;
-module.exports.land  = land;
-module.exports.drive = drive;
+module.exports = car;
+//module.exports = put;
+//module.exports = land;
+//module.exports = drive;
+
