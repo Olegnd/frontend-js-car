@@ -16,33 +16,36 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
     defaultSpeed: 60,
     maxSpeed: 100,
     seats: 4,
-    pessengers: pessengers
+    pessengers: pessengers,
+    put: undefined,
+    land: undefined,
+    drive: undefined
   };
-  module.exports = car;
   if (pessengers.length === 0) {
     car.speed = 0;
   }
-  function put() {
+  car.put = function put() {
     if (pessengers.length < car.seats) {
       pessengers.push(true);
     }
-  }
-  function land() {
+  };
+  car.land = function land() {
     if (pessengers.length > 0) {
       pessengers.shift();
     }
-  }
-  function drive(newSpeed) {
-    if (newSpeed <= car.maxSpeed && pessengers.length > 0) {
-      car.speed = newSpeed;
+  };
+  car.drive = function drive(newSpeed) {
+    if (pessengers.length <= 0) {
+      car.speed = 0;
     } else {
-      if (pessengers.length > 0) {
-        car.speed = car.maxSpeed;
+      if (newSpeed <= car.maxSpeed) {
+        car.speed = newSpeed;
       } else {
-        car.speed = 0;
+        car.speed = car.maxSpeed;
       }
     }
-  }
+  };
+  module.exports = car;
   return module.exports;
 });
 

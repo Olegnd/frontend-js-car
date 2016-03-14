@@ -1,23 +1,26 @@
 'use strict';
-//code Olegnd
-/* 
+//code Olegnd 
 // test put pessenger
 function testPutPessengers(put){
 var    quantityPut     =  0;
 while (quantityPut < 6){
        put();
        quantityPut = quantityPut + 1;
-      }
-console.log(' quantityPut = ',quantityPut);
+      
+console.log(' quantityPut = ',quantityPut);}
+
 }
+
+
 // test land pessenger
 function testLandPessengers(land){
-var quantityLand = 0;       
+var     quantityLand = 0;       
 while (quantityLand < 5){
        land();
        quantityLand = quantityLand + 1;
-      }
-console.log('quantityLand = ',quantityLand);    
+      
+console.log('quantityLand = ',quantityLand);}
+    
 }
 
 // test change speed
@@ -30,7 +33,7 @@ while (indexSpeedometr < speedometer.length){
        indexSpeedometr = indexSpeedometr + 1;
       }
 }
+
 module.exports.testPutPessengers  = testPutPessengers;
 module.exports.testLandPessengers = testLandPessengers;
 module.exports.testChangeSpeed    = testChangeSpeed;
-*/

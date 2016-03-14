@@ -2,10 +2,9 @@
 // code Olegnd
 
 var car = require('js/car.js');
-//var put = require('js/car.js');
-//var land = require('js/car.js');
-//var drive = require('js/car.js');
-//put();
-//land();
-//drive(50);
+
+var test = require('js/test_car.js');
+test.testPutPessengers(car.put);
+test.testLandPessengers(car.land);
+test.testChangeSpeed(car.drive);
 console.log(car);
