@@ -1,29 +1,22 @@
 'use strict';
 // code Olegnd
-
-
-
 var car = {color:'white',dours:4,speed:0,defaultSpeed:60,
-           maxSpeed:100,seats:4,pessengers:undefined,
-		   put:undefined,land:undefined,drive:undefined};
-
+           maxSpeed:100,seats:4};
 car.pessengers = [];
-console.log('this car   ',this);
- 
-car.put   = function put()           {if   (car.pessengers.length < car.seats)
-                                           {car.pessengers.push(true)}
-console.log('this put   ',this);						        
-									 }
-car.land  = function land()          {if   (car.pessengers.length > 0)
-                                           {car.pessengers.shift()}
-console.log('this land  ',this);						             
-									 }
-car.drive = function drive(newSpeed) {if   (car.pessengers.length <= 0) {car.speed = 0}
-									  else {if   (newSpeed  <= car.maxSpeed)
-									             {car.speed  = newSpeed}
-                                            else {car.speed  = car.maxSpeed}
-										   }
-console.log('this drive ',this);                                     
-									 } 
+car.put = function put() {if (this.pessengers.length < car.seats)
+                             {this.pessengers.push(true)}
+console.log('this.pessenger = ' + this.pessengers);}
+
+car.land = function land() {if (this.pessengers.length > 0)
+                               {this.pessengers.shift()}
+console.log('this.pessenger = ' + this.pessengers);}
+
+car.drive = function drive(newSpeed) {if (this.pessengers.length <= 0) {this.speed = 0}
+						              else {if (newSpeed  <= this.maxSpeed)
+								               {this.speed  = newSpeed}
+                                            else {this.speed  = this.maxSpeed}}
+console.log('this.speed = ' + this.speed);}
 module.exports = car;
+
+
 

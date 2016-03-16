@@ -8,42 +8,38 @@ $__System.registerDynamic("2", [], true, function($__require, exports, module) {
   var define,
       global = this,
       GLOBAL = this;
-  var pessengers = [];
   var car = {
     color: 'white',
     dours: 4,
     speed: 0,
     defaultSpeed: 60,
     maxSpeed: 100,
-    seats: 4,
-    pessengers: pessengers,
-    put: undefined,
-    land: undefined,
-    drive: undefined
+    seats: 4
   };
-  if (pessengers.length === 0) {
-    car.speed = 0;
-  }
+  car.pessengers = [];
   car.put = function put() {
-    if (pessengers.length < car.seats) {
-      pessengers.push(true);
+    if (this.pessengers.length < car.seats) {
+      this.pessengers.push(true);
     }
+    console.log('this.pessenger = ' + this.pessengers);
   };
   car.land = function land() {
-    if (pessengers.length > 0) {
-      pessengers.shift();
+    if (this.pessengers.length > 0) {
+      this.pessengers.shift();
     }
+    console.log('this.pessenger = ' + this.pessengers);
   };
   car.drive = function drive(newSpeed) {
-    if (pessengers.length <= 0) {
-      car.speed = 0;
+    if (this.pessengers.length <= 0) {
+      this.speed = 0;
     } else {
-      if (newSpeed <= car.maxSpeed) {
-        car.speed = newSpeed;
+      if (newSpeed <= this.maxSpeed) {
+        this.speed = newSpeed;
       } else {
-        car.speed = car.maxSpeed;
+        this.speed = this.maxSpeed;
       }
     }
+    console.log('this.speed = ' + this.speed);
   };
   module.exports = car;
   return module.exports;
