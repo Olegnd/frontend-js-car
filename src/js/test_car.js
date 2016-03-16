@@ -3,7 +3,7 @@
 // test put pessenger
 function testPutPessengers(put){
 var    quantityPut     =  0;
-while (quantityPut < 6){
+while (quantityPut < 2){
        put();
        quantityPut = quantityPut + 1;
       
@@ -15,7 +15,7 @@ console.log(' quantityPut = ',quantityPut);}
 // test land pessenger
 function testLandPessengers(land){
 var     quantityLand = 0;       
-while (quantityLand < 5){
+while (quantityLand < 1){
        land();
        quantityLand = quantityLand + 1;
       
@@ -25,7 +25,7 @@ console.log('quantityLand = ',quantityLand);}
 
 // test change speed
 function testChangeSpeed(drive){
-var speedometer     = [0,30,90,100,120],
+var speedometer     = [90],
     indexSpeedometr = 0;
 while (indexSpeedometr < speedometer.length){
        drive(speedometer[indexSpeedometr]);
