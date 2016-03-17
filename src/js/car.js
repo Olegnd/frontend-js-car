@@ -23,34 +23,34 @@ var car = {
  },
 
     land: function () {
-        if (this.passengers.length >= 2) {
-            this.passengers.shift();
-        }
-        else {
-            this.passengers.shift(); car.speed = 0;
-        }
+       if (this.passengers.length >= 2) {
+           this.passengers.shift();
+       }
+       else {
+           this.passengers.shift(); car.speed = 0;
+       }
  },
 
     drive: function (newSpeed) {
-        if (this.passengers.length === 0) {
-            this.speed = 0;
-        }
-        else {
-            if (newSpeed  <= this.maxSpeed) {
-                this.speed  = newSpeed;
-            }
-            else {
-                this.speed  = this.maxSpeed}
-            }
-            if (newSpeed === undefined && this.passengers.length ===0) {
-                this.speed = 0;
-            }
-            else {
-                if (newSpeed === undefined) {
-                    this.speed = this.defaultSpeed;
-            } 
-        }
-}
+       if (this.passengers.length === 0) {
+           this.speed = 0;
+       }
+       else {
+           if (newSpeed  <= this.maxSpeed) {
+               this.speed  = newSpeed;
+           }
+           else {
+               this.speed  = this.maxSpeed}
+           }
+           if (newSpeed === undefined && this.passengers.length ===0) {
+               this.speed = 0;
+           }
+           else {
+               if (newSpeed === undefined) {
+                   this.speed = this.defaultSpeed;
+           } 
+       }
+ }
 }
 module.exports = car;
 
