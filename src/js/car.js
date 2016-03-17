@@ -27,7 +27,7 @@ var car = {
            this.passengers.shift();
        }
        else {
-           this.passengers.shift(); car.speed = 0;
+           this.passengers.shift(); this.speed = 0;
        }
  },
 
